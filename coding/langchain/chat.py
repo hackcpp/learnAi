@@ -1,16 +1,20 @@
-import os
 from openai import OpenAI
 from dotenv import load_dotenv
+from os import getenv
 
 messages = [
     {"role": "system", "content": "你是一个AI助手，请用中文回答问题。"}
 ]
 
-def main():
-    load_dotenv()  # 加载环境变量
-    key = os.getenv("SF_API_KEY") # 从环境变量中获取API密钥
-    url = os.getenv("SF_API_BASE") # 从环境变量中获取API基础URL
+load_dotenv("../../.env")  # 加载环境变量
 
+key = getenv("SF_API_KEY") 
+url = getenv("SF_API_BASE")
+model = getenv("SF_MODEL")
+
+print(key, url, model)
+
+def main():
     client = OpenAI(api_key=key, base_url=url)
     
     print("欢迎使用AI聊天助手！输入/help查看帮助")
@@ -51,7 +55,7 @@ def get_ai_response(client, prompt):
         message = {"role": "user", "content": prompt}
         messages.append(message)
         response = client.chat.completions.create(
-            model="deepseek-ai/DeepSeek-V3",
+            model=model,
             messages=messages,
             temperature=0.7
         )
