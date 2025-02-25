@@ -1,5 +1,5 @@
-cline/*
+coding/cline/
 .DS_Store
 *.pyc
 .env
-langchain/
+coding/langchain/langchain-in-action-main/
