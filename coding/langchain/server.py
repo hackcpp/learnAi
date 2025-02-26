@@ -15,7 +15,7 @@ model = getenv("SF_MODEL")
 
 os.environ["DEEPSEEK_API_KEY"] = key
 os.environ["DEEPSEEK_API_BASE"] = url
-print(key, url, model)
+# print(key, url, model)
 
 class Args(BaseModel):
     text: str
