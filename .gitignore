@@ -3,3 +3,4 @@ coding/cline/
 *.pyc
 .env
 coding/langchain/langchain-in-action-main/
+test.db
