@@ -1,0 +1,3 @@
+[submodule "mcp/mcp-server-uv"]
+	path = mcp/mcp-server-uv
+	url = git@github.com:hackcpp/mcp-server-uv.git
