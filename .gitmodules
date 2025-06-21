@@ -1,3 +1,9 @@
 [submodule "mcp/mcp-server-uv"]
 	path = mcp/mcp-server-uv
 	url = git@github.com:hackcpp/mcp-server-uv.git
+[submodule "dify"]
+	path = dify
+	url = git@github.com:hackcpp/dify.git
+[submodule "n8n"]
+	path = n8n
+	url = git@github.com:hackcpp/n8n.git
